@@ -9,8 +9,7 @@ import ContactInformation from "../contactInformation/page";
 // const madrasaImages = e.target.madrasaImages.value;
 
 const BasicInformation = () => {
-  const [showContactInformation, setShowContactInformation] =
-    useState("hidden");
+  const [showContactInformation, setShowContactInformation] = useState("");
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
