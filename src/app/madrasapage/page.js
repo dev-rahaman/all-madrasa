@@ -5,6 +5,7 @@ import Overview from "./Overview";
 import MadrasaMap from "./MadrasaMap";
 import MadrasaNoticeBoard from "./MadrasaNoticeBoard";
 import ImageGallery from "./ImageGallery";
+import InstructorCard from "./InstructorCard";
 
 const MadrasaPage = () => {
   return (
@@ -14,6 +15,7 @@ const MadrasaPage = () => {
       <Overview />
       <MadrasaNoticeBoard />
       <ImageGallery />
+      <InstructorCard />
       <MadrasaMap />
     </>
   );

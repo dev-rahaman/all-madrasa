@@ -5,21 +5,21 @@ const notices = [
     id: 1,
     title: "Parent-Teacher Meeting",
     content:
-      "There will be a parent-teacher meeting on September 15th at 4:00 PM in the school auditorium. All parents are requested to attend.",
+      "15 ই সেপ্টেম্বর বিকেল 4:00 PM জামিয়া রাশিদিয়ার অডিটোরিয়ামে একটি অভিভাবক-শিক্ষক সভা হবে৷ সকল অভিভাবকদের উপস্থিত থাকার জন্য অনুরোধ করা যাচ্ছে।",
     date: "2023-09-10",
   },
   {
     id: 2,
     title: "Upcoming Exam Schedule",
     content:
-      "The final exams for this semester will begin on October 1st. Please check the exam schedule posted on the school website.",
+      "15 ই সেপ্টেম্বর বিকেল 4:00 PM জামিয়া রাশিদিয়ার অডিটোরিয়ামে একটি অভিভাবক-শিক্ষক সভা হবে৷ সকল অভিভাবকদের উপস্থিত থাকার জন্য অনুরোধ করা যাচ্ছে।",
     date: "2023-09-05",
   },
   {
     id: 3,
     title: "School Holiday - Labor Day",
     content:
-      "The school will be closed on September 6th in observance of Labor Day. Enjoy your day off!",
+      "15 ই সেপ্টেম্বর বিকেল 4:00 PM জামিয়া রাশিদিয়ার অডিটোরিয়ামে একটি অভিভাবক-শিক্ষক সভা হবে৷ সকল অভিভাবকদের উপস্থিত থাকার জন্য অনুরোধ করা যাচ্ছে।",
     date: "2023-08-29",
   },
 ];
