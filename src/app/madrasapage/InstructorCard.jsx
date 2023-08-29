@@ -56,9 +56,9 @@ const InstructorCard = () => {
   return (
     <div id="instructors" className="bg-gray-100 p-8">
       <h2 className="text-2xl font-semibold mb-4">Instructors</h2>
-      <div className="flex flex-wrap gap-5 justify-between cursor-pointer">
+      <div className="flex flex-wrap gap-5 justify-between">
         {instructors.map((instructor, idx) => (
-          <div key={idx} className="w-[300px] bg-gray-300 ">
+          <div key={idx} className="w-[300px] bg-gray-300 cursor-pointer">
             <Image
               src={instructor.image}
               width={100}

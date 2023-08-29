@@ -32,18 +32,6 @@ const Navbar = () => {
                   ওভারভিউ
                 </Link>
                 <Link
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  বেফাক বোর্ড
-                </Link>
-                <Link
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  রেজাল্ট
-                </Link>
-                <Link
                   href="#notice"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
@@ -56,28 +44,40 @@ const Navbar = () => {
                   গ্যালারি
                 </Link>
                 <Link
-                  href="#map"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  ম্যাপ
-                </Link>
-                <Link
-                  href="#"
+                  href="#feedback"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   ফিডব্যাক
-                </Link>
-                <Link
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  কন্টাক ইনফরমেশন
                 </Link>
                 <Link
                   href="#instructors"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   উস্তাদ
+                </Link>
+                <Link
+                  href="#contactInformation"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                >
+                  কন্টাক ইনফরমেশন
+                </Link>
+                <Link
+                  href="#"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                >
+                  বেফাক বোর্ড
+                </Link>
+                <Link
+                  href="#"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                >
+                  রেজাল্ট
+                </Link>
+                <Link
+                  href="#map"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                >
+                  ম্যাপ
                 </Link>
               </div>
             </div>
@@ -124,18 +124,6 @@ const Navbar = () => {
               ওভারভিউ
             </Link>
             <Link
-              href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              বেফাক বোর্ড
-            </Link>
-            <Link
-              href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              রেজাল্ট
-            </Link>
-            <Link
               href="#notice"
               className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
@@ -148,28 +136,40 @@ const Navbar = () => {
               গ্যালারি
             </Link>
             <Link
-              href="#map"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              ম্যাপ
-            </Link>
-            <Link
-              href="#"
+              href="#feedback"
               className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
               ফিডব্যাক
-            </Link>
-            <Link
-              href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              কন্টাক ইনফরমেশন
             </Link>
             <Link
               href="#instructors"
               className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
             >
               উস্তাদ
+            </Link>
+            <Link
+              href="#contactInformation"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >
+              কন্টাক ইনফরমেশন
+            </Link>
+            <Link
+              href="#"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >
+              বেফাক বোর্ড
+            </Link>
+            <Link
+              href="#"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >
+              রেজাল্ট
+            </Link>
+            <Link
+              href="#map"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            >
+              ম্যাপ
             </Link>
           </div>
         </div>
