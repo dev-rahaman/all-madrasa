@@ -24,7 +24,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-10">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Column 1 */}
           <div className="col-span-1">
             <h2 className="text-xl font-semibold mb-4">About us</h2>
@@ -124,28 +124,28 @@ const Footer = () => {
               জেলা ভিত্তিক মাদ্রাসাসমূহ{" "}
             </h2>
             <nav>
-              <div className="block my-2">
+              <div className=" my-2">
                 <Dhaka />
               </div>
-              <div className="block my-2">
+              <div className="  my-2">
                 <Chottogram />
               </div>
-              <div className="block my-2">
+              <div className="  my-2">
                 <Rajshahi />
               </div>
-              <div className="block my-2">
+              <div className="  my-2">
                 <Khulna />
               </div>
-              <div className="block my-2">
+              <div className="  my-2">
                 <Barisal />
               </div>
-              <div className="block my-2">
+              <div className="  my-2">
                 <Rangpor />
               </div>
-              <div className="block my-2">
+              <div className="  my-2">
                 <Monymonshing />
               </div>
-              <div className="block my-2">
+              <div className="  my-2">
                 <Silet />
               </div>
             </nav>

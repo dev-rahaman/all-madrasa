@@ -1,7 +1,7 @@
 "use client";
 import { FileInput, Label, TextInput } from "flowbite-react";
 import { useState } from "react";
-import ContactInformation from "../contactInformation/page";
+// import ContactInformation from "../contactInformation/page";
 
 // const madrasaName = e.target.madrasaName.value;
 // const madrasaType = e.target.madrasaType.value;
@@ -225,9 +225,9 @@ const BasicInformation = () => {
         </form>
       </div>
 
-      <div className={`${showContactInformation}`}>
+      {/* <div className={`${showContactInformation}`}>
         <ContactInformation />
-      </div>
+      </div> */}
     </>
   );
 };

@@ -36,7 +36,7 @@ const Dhaka = () => {
   };
 
   return (
-    <div className="relative inline-block text-left">
+    <div >
       <OutsideClickHandler onOutsideClick={closeDropdown}>
         <div>
           <button
@@ -61,7 +61,7 @@ const Dhaka = () => {
         </div>
 
         {isOpen && (
-          <div className="z-50 origin-top-right absolute mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <div className="z-50 origin-top-right  absolute mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
             <div
               className="py-1"
               role="menu"

@@ -1,10 +1,7 @@
-"use client";
-import BasicInformation from "./basicInformation/BasicInformation";
-
 const MadrasaRegistration = () => {
   return (
     <>
-      <BasicInformation />
+      <h2>Madrasa Registration</h2>
     </>
   );
 };

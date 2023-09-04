@@ -1,51 +1,51 @@
 "use client";
 import { Label, TextInput } from "flowbite-react";
-
-import MedicalStaffInformation from "../staffInformation/page";
+// import FacilitiesAndServices from "../facilitiesAndServices/page";
 import { useState } from "react";
 
-const FacilitiesAndServices = () => {
-  const [showStaffInformation, setShowStaffInformation] = useState("hidden");
+const LegalAndAdministrativeInformation = () => {
+  const [showFacilitiesAndServices, setShowFacilitiesAndServices] =
+    useState("hidden");
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    setShowStaffInformation("block");
+    setShowFacilitiesAndServices("block");
   };
 
   return (
     <>
-      <h2 className="text-center">Services Information</h2>
+      <h2 className="text-center">Legal Information</h2>
       <div className="flex items-center justify-center w-full">
         <form
           className="flex lg:w-[500px] flex-col gap-4"
           onSubmit={handleFormSubmit}
         >
           <div>
-            {/* Number of Beds */}
+            {/* RegistrationNumber */}
             <div className="mb-2 block">
               <Label
-                htmlFor="NumberOfBeds"
-                value="সর্বমোট ছাত্র ছাত্রী সংখ্যা"
+                htmlFor="RegistrationNumber"
+                value="মাদ্রাসার রেজিস্ট্রেশন নম্বর "
               />
             </div>
             <TextInput
-              id="NumberOfBeds"
-              placeholder="সর্বমোট ছাত্র / ছাত্রী সংখ্যা"
+              id="RegistrationNumber"
+              placeholder="মাদ্রাসার রেজিস্ট্রেশন নম্বর যদি থাকে"
               required
-              type="Number Of Beds"
+              type="RegistrationNumber"
             />
           </div>
 
-          {/*Total Number of Nurses */}
+          {/* Ownership Type */}
           <div>
             <div className="mb-2 block">
-              <Label htmlFor="ListOfServices" value="জামাত বা ক্লাসসমূহ " />
+              <Label htmlFor="OwnershipType" value="মালিকানার ধরন" />
             </div>
             <TextInput
-              id="ListOfServices"
+              id="OwnershipType"
               required
-              type="ListOfServices"
-              placeholder="জামাত বা ক্লাসসমূহ "
+              type="OwnershipType"
+              placeholder="মালিকানার ধরন উদাহরণ (প্রাইভেট, লোকাল)"
             />
           </div>
           <div className="flex items-center justify-end">
@@ -69,11 +69,11 @@ const FacilitiesAndServices = () => {
           </div>
         </form>
       </div>
-      <div className={`${showStaffInformation}`}>
-        <MedicalStaffInformation />
-      </div>
+      {/* <div className={`${showFacilitiesAndServices}`}>
+        <FacilitiesAndServices />
+      </div> */}
     </>
   );
 };
 
-export default FacilitiesAndServices;
+export default LegalAndAdministrativeInformation;

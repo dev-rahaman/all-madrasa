@@ -2,7 +2,7 @@
 import { Label, TextInput } from "flowbite-react";
 
 import React, { useState } from "react";
-import LegalAndAdministrativeInformation from "../egalAndAdministrativeInformation/page";
+// import LegalAndAdministrativeInformation from "../egalAndAdministrativeInformation/page";
 
 const ContactInformation = () => {
   const [
@@ -95,9 +95,9 @@ const ContactInformation = () => {
           </div>
         </form>
       </div>
-      <div className={`${showLegalAndAdministrativeInformation}`}>
+      {/* <div className={`${showLegalAndAdministrativeInformation}`}>
         <LegalAndAdministrativeInformation />
-      </div>
+      </div> */}
     </>
   );
 };

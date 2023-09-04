@@ -38,3 +38,14 @@ option:nth-child(odd) {
   border-radius: 5px;
   top: 10;
 }
+
+.dini-ilm {
+  background-image: url("/dini-ilm");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+::selection {
+  color: #000;
+  background-color: #ea8b26;
+}
