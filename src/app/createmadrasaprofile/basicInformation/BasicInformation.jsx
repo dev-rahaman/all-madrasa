@@ -2,6 +2,7 @@
 import { FileInput, Label, TextInput } from "flowbite-react";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "@/Provider/AuthProvider";
+import AllZilla from "@/app/Component/AllZilla";
 
 const BasicInformation = () => {
   const { redirect, handleInputChange, isFormEmpty, formData, setFormData } =
@@ -52,34 +53,8 @@ const BasicInformation = () => {
             />
           </div>
 
-          {/* madrasa জেলা  */}
           <div>
-            <div className="mb-2 block">
-              <Label htmlFor="madrasaName" value="মাদ্রাসার জেলা" />
-            </div>
-            <TextInput
-              id="madrasaName"
-              name="madrasaDistrict"
-              value={formData.madrasaDistrict}
-              onChange={handleInputChange}
-              placeholder="মাদ্রাসার জেলা"
-              required
-            />
-          </div>
-
-          {/* madrasa থানা  */}
-          <div>
-            <div className="mb-2 block">
-              <Label htmlFor="madrasaName" value="মাদ্রাসার থানা " />
-            </div>
-            <TextInput
-              id="madrasaName"
-              name="madrasaPoliceStation"
-              value={formData.madrasaPoliceStation}
-              onChange={handleInputChange}
-              placeholder="মাদ্রাসার থানা "
-              required
-            />
+            <AllZilla />
           </div>
 
           {/* madrasa গ্রাম  */}
