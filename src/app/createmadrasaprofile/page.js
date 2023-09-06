@@ -9,10 +9,11 @@ const CreatemadrasaProfile = () => {
   return (
     <div>
       <BasicInformation />
-      <ContactInformation />
+
+      {/* <ContactInformation />
       <LegalAndAdministrativeInformation />
       <FacilitiesAndServices />
-      <MedicalStaffInformation />
+      <MedicalStaffInformation /> */}
     </div>
   );
 };

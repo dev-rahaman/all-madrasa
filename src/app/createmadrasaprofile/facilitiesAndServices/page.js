@@ -1,24 +1,33 @@
 "use client";
 import { Label, TextInput } from "flowbite-react";
-
-// import MedicalStaffInformation from "../../madrasaregistration/staffInformation/page";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "@/Provider/AuthProvider";
 
 const FacilitiesAndServices = () => {
-  const [showStaffInformation, setShowStaffInformation] = useState("hidden");
+  const { redirect, handleInputChange, isFormEmpty, formData, setFormData } =
+    useContext(AuthContext);
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    setShowStaffInformation("block");
+  const initialFormData = {
+    NumberOfBeds: "",
+    ListOfServices: "",
   };
 
+  useEffect(() => {
+    setFormData(initialFormData);
+  }, []);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!isFormEmpty()) {
+      redirect("/createmadrasaprofile/staffInformation");
+    }
+  };
   return (
     <>
       <h2 className="text-center">Services Information</h2>
       <div className="flex items-center justify-center w-full">
         <form
           className="flex lg:w-[500px] flex-col gap-4"
-          onSubmit={handleFormSubmit}
+          onSubmit={handleSubmit}
         >
           <div>
             {/* Number of Beds */}
@@ -30,6 +39,9 @@ const FacilitiesAndServices = () => {
             </div>
             <TextInput
               id="NumberOfBeds"
+              name="NumberOfBeds"
+              onChange={handleInputChange}
+              value={formData.NumberOfBeds}
               placeholder="সর্বমোট ছাত্র / ছাত্রী সংখ্যা"
               required
               type="Number Of Beds"
@@ -43,15 +55,27 @@ const FacilitiesAndServices = () => {
             </div>
             <TextInput
               id="ListOfServices"
+              name="ListOfServices"
+              onChange={handleInputChange}
+              value={formData.ListOfServices}
+              placeholder="জামাত বা ক্লাসসমূহ "
               required
               type="ListOfServices"
-              placeholder="জামাত বা ক্লাসসমূহ "
             />
           </div>
           <div className="flex items-center justify-end">
-            <button type="submit">
+            <button
+              type="submit"
+              onClick={() => redirect(`/createmadrasaprofile/staffInformation`)}
+              disabled={isFormEmpty()}
+              className={`text-white bg-blue-700 ${
+                isFormEmpty()
+                  ? "cursor-not-allowed opacity-50"
+                  : "hover:bg-blue-800"
+              } font-medium rounded-lg text-sm px-5 py-2.5 text-center`}
+            >
               <svg
-                class="w-6 h-6 text-gray-800 dark:text-white"
+                className="w-6 h-6 dark:text-white"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -59,9 +83,9 @@ const FacilitiesAndServices = () => {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M1 5h12m0 0L9 1m4 4L9 9"
                 />
               </svg>
@@ -69,9 +93,6 @@ const FacilitiesAndServices = () => {
           </div>
         </form>
       </div>
-      {/* <div className={`${showStaffInformation}`}>
-        <MedicalStaffInformation />
-      </div> */}
     </>
   );
 };

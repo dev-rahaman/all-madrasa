@@ -12,3 +12,15 @@ export async function GET() {
     data = { success: false };
   }
 }
+
+export async function POST(request) {
+  try {
+    await mongoose.connect(MONGODB_URI);
+    const data = await request.json();
+    const madrasaInformation = new MadrasaInformation(data);
+    const result = await madrasaInformation.save();
+    return NextResponse.json({ result, status: 200, success: true });
+  } catch (error) {
+    console.log(error.message);
+  }
+}

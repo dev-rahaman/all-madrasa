@@ -1,19 +1,32 @@
 "use client";
 import { FileInput, Label, TextInput } from "flowbite-react";
-import { useState } from "react";
-// import ContactInformation from "../contactInformation/page";
-
-// const madrasaName = e.target.madrasaName.value;
-// const madrasaType = e.target.madrasaType.value;
-// const madrasaLogo = e.target.madrasaLogo.value;
-// const madrasaImages = e.target.madrasaImages.value;
+import { useContext, useEffect } from "react";
+import { AuthContext } from "@/Provider/AuthProvider";
 
 const BasicInformation = () => {
-  const [showContactInformation, setShowContactInformation] = useState("");
+  const { redirect, handleInputChange, isFormEmpty, formData, setFormData } =
+    useContext(AuthContext);
 
-  const handleFormSubmit = (e) => {
+  const initialFormData = {
+    madrasaName: "",
+    madrasaDistrict: "",
+    madrasaPoliceStation: "",
+    madrasaVillage: "",
+    madrasaType: "",
+    // madrasaGallery1: "",
+    // madrasaGallery2: "",
+    // madrasaGallery3: "",
+  };
+
+  useEffect(() => {
+    setFormData(initialFormData);
+  }, []);
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setShowContactInformation("block");
+    if (!isFormEmpty()) {
+      redirect("/createmadrasaprofile/contactInformation");
+    }
   };
 
   return (
@@ -21,7 +34,7 @@ const BasicInformation = () => {
       <div className="flex items-center justify-center w-full">
         <form
           className="flex lg:w-[500px] flex-col gap-4"
-          onSubmit={handleFormSubmit}
+          onSubmit={handleSubmit}
         >
           {/* madrasa Name  */}
           <h2 className="font-extrabold">Basic Information</h2>
@@ -32,6 +45,8 @@ const BasicInformation = () => {
             <TextInput
               id="madrasaName"
               name="madrasaName"
+              onChange={handleInputChange}
+              value={formData.madrasaName}
               placeholder="মাদ্রাসার নাম"
               required
             />
@@ -44,7 +59,9 @@ const BasicInformation = () => {
             </div>
             <TextInput
               id="madrasaName"
-              name="madrasaName"
+              name="madrasaDistrict"
+              value={formData.madrasaDistrict}
+              onChange={handleInputChange}
               placeholder="মাদ্রাসার জেলা"
               required
             />
@@ -57,7 +74,9 @@ const BasicInformation = () => {
             </div>
             <TextInput
               id="madrasaName"
-              name="madrasaName"
+              name="madrasaPoliceStation"
+              value={formData.madrasaPoliceStation}
+              onChange={handleInputChange}
               placeholder="মাদ্রাসার থানা "
               required
             />
@@ -70,7 +89,9 @@ const BasicInformation = () => {
             </div>
             <TextInput
               id="madrasaName"
-              name="madrasaName"
+              name="madrasaVillage"
+              value={formData.madrasaVillage}
+              onChange={handleInputChange}
               placeholder="মাদ্রাসার গ্রাম"
               required
             />
@@ -83,6 +104,9 @@ const BasicInformation = () => {
             </div>
             <TextInput
               id="madrasaType"
+              name="madrasaType"
+              value={formData.madrasaType}
+              onChange={handleInputChange}
               required
               type="madrasaType"
               placeholder="উদাহরণ (নূরানী, হাফেজী, জামিয়া, দাওয়া)"
@@ -91,9 +115,10 @@ const BasicInformation = () => {
 
           {/* madrasa logo */}
 
-          <div className="mb-2 block">
+          {/* <div className="mb-2 block">
             <Label
               htmlFor="choiceLogo"
+              name="madrasaLogoLabel"
               value="মাদ্রাসার লোগো চয়েস করুন"
               className="cursor-pointer w-[120px] h-[120px] text-center border border-dashed border-black flex items-center justify-center rounded"
             >
@@ -115,12 +140,13 @@ const BasicInformation = () => {
             <FileInput
               required
               id="choiceLogo"
+              name="madrasaLogo"
+              value={formData.madrasaLogo}
+              onChange={handleInputChange}
               className="hidden"
               type="madrasaLogo"
             />
           </div>
-
-          {/* Images of the madrasa */}
 
           <div className="flex  justify-between mb-2">
             <Label
@@ -145,6 +171,9 @@ const BasicInformation = () => {
             </Label>
             <FileInput
               required
+              name="madrasaGallery1"
+              value={formData.madrasaGallery1}
+              onChange={handleInputChange}
               id="choiceLogo"
               className="hidden"
               type="madrasaLogo"
@@ -174,6 +203,9 @@ const BasicInformation = () => {
               required
               id="choiceLogo"
               className="hidden"
+              name="madrasaGallery2"
+              value={formData.madrasaGallery2}
+              onChange={handleInputChange}
               type="madrasaLogo"
             />
             <Label
@@ -198,36 +230,48 @@ const BasicInformation = () => {
             </Label>
             <FileInput
               required
-              id="choiceLogo"
+              id="madrasaGallery3"
+              name="madrasaGallery3"
+              value={formData.madrasaGallery3}
+              onChange={handleInputChange}
               className="hidden"
               type="madrasaLogo"
             />
-          </div>
+          </div> */}
           <div className="flex items-center justify-end">
-            <button type="submit">
-              <svg
-                class="w-6 h-6 text-gray-800 dark:text-white"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 14 10"
+            <button
+              className={`text-white bg-blue-700 ${
+                isFormEmpty()
+                  ? "cursor-not-allowed opacity-50"
+                  : "hover:bg-blue-800"
+              } font-medium rounded-lg text-sm px-5 py-2.5 text-center`}
+            >
+              <button
+                onClick={() =>
+                  redirect("/createmadrasaprofile/contactInformation")
+                }
+                disabled={isFormEmpty()}
               >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M1 5h12m0 0L9 1m4 4L9 9"
-                />
-              </svg>
+                <svg
+                  class="w-6 h-6 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M1 5h12m0 0L9 1m4 4L9 9"
+                  />
+                </svg>
+              </button>
             </button>
           </div>
         </form>
       </div>
-
-      {/* <div className={`${showContactInformation}`}>
-        <ContactInformation />
-      </div> */}
     </>
   );
 };
