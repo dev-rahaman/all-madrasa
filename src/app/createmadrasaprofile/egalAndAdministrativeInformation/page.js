@@ -1,6 +1,6 @@
 "use client";
 import { AuthContext } from "@/Provider/AuthProvider";
-import { Label, TextInput } from "flowbite-react";
+import { Label, TextInput, Textarea } from "flowbite-react";
 import { useContext, useEffect } from "react";
 
 const LegalAndAdministrativeInformation = () => {
@@ -8,8 +8,9 @@ const LegalAndAdministrativeInformation = () => {
     useContext(AuthContext);
 
   const initialFormData = {
-    RegistrationNumber: "",
+    registrationNumber: "",
     OwnershipType: "",
+    description: "",
   };
 
   useEffect(() => {
@@ -34,18 +35,15 @@ const LegalAndAdministrativeInformation = () => {
           <div>
             {/* RegistrationNumber */}
             <div className="mb-2 block">
-              <Label
-                htmlFor="RegistrationNumber"
-                value="মাদ্রাসার রেজিস্ট্রেশন নম্বর "
-              />
+              <Label htmlFor="registrationNumber" value="রেজিস্ট্রেশন নম্বর " />
             </div>
 
             <TextInput
-              id="RegistrationNumber"
-              name="RegistrationNumber"
+              id="registrationNumber"
+              name="registrationNumber"
               onChange={handleInputChange}
-              value={formData.RegistrationNumber}
-              placeholder="মাদ্রাসার রেজিস্ট্রেশন নম্বর যদি থাকে"
+              value={formData.registrationNumber}
+              placeholder="রেজিস্ট্রেশন নম্বর অপশনাল "
               required
               type="RegistrationNumber"
             />
@@ -65,6 +63,22 @@ const LegalAndAdministrativeInformation = () => {
               placeholder="মালিকানার ধরন উদাহরণ (প্রাইভেট, লোকাল)"
               required
               type="OwnershipType"
+            />
+          </div>
+          {/* Description */}
+          <div>
+            <div className="mb-2 block">
+              <Label htmlFor="Description" value="মালিকানার ধরন" />
+            </div>
+            <Textarea
+              className="resize-none h-[200px]"
+              id="description"
+              name="description"
+              onChange={handleInputChange}
+              value={formData.description}
+              placeholder="এখানে মাদ্রাসার সম্পর্কে বিস্তারিত লিখুন।"
+              required
+              type="description"
             />
           </div>
           <div className="flex items-center justify-end">

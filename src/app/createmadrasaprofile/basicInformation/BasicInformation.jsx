@@ -10,10 +10,11 @@ const BasicInformation = () => {
 
   const initialFormData = {
     madrasaName: "",
-    madrasaDistrict: "",
-    madrasaPoliceStation: "",
+    selectedZilla: "",
+    selectedThana: "",
     madrasaVillage: "",
     madrasaType: "",
+    established: "",
     // madrasaGallery1: "",
     // madrasaGallery2: "",
     // madrasaGallery3: "",
@@ -38,7 +39,6 @@ const BasicInformation = () => {
           onSubmit={handleSubmit}
         >
           {/* madrasa Name  */}
-          <h2 className="font-extrabold">Basic Information</h2>
           <div>
             <div className="mb-2 block">
               <Label htmlFor="madrasaName" value="মাদ্রাসার নাম" />
@@ -57,17 +57,17 @@ const BasicInformation = () => {
             <AllZilla />
           </div>
 
-          {/* madrasa গ্রাম  */}
+          {/* গ্রামের নাম  */}
           <div>
             <div className="mb-2 block">
-              <Label htmlFor="madrasaName" value="মাদ্রাসার গ্রাম" />
+              <Label htmlFor="madrasaName" value="গ্রামের নাম" />
             </div>
             <TextInput
               id="madrasaName"
               name="madrasaVillage"
               value={formData.madrasaVillage}
               onChange={handleInputChange}
-              placeholder="মাদ্রাসার গ্রাম"
+              placeholder="গ্রামের নাম "
               required
             />
           </div>
@@ -85,6 +85,38 @@ const BasicInformation = () => {
               required
               type="madrasaType"
               placeholder="উদাহরণ (নূরানী, হাফেজী, জামিয়া, দাওয়া)"
+            />
+          </div>
+
+          {/* madrasa established  */}
+          <div>
+            <div className="mb-2 block">
+              <Label htmlFor="established" value="স্থাপিত তারিখ" />
+            </div>
+            <TextInput
+              id="established"
+              name="established"
+              value={formData.established}
+              onChange={handleInputChange}
+              required
+              type="established"
+              placeholder="স্থাপিত (১৯৯৬)"
+            />
+          </div>
+
+          {/* রেজিস্ট্রেশন নম্বর */}
+          <div>
+            <div className="mb-2 block">
+              <Label htmlFor="registrationNumber" value="রেজিস্ট্রেশন নম্বর" />
+            </div>
+            <TextInput
+              id="registrationNumber"
+              name="registrationNumber"
+              value={formData.registrationNumber}
+              onChange={handleInputChange}
+              required
+              type="registrationNumber"
+              placeholder="রেজিস্ট্রেশন নম্বর অপশনাল "
             />
           </div>
 

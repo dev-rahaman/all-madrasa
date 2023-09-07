@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 const madrasaInformationModal = new mongoose.Schema({
   madrasaName: String,
+  madrasaDescription: String,
   madrasaDistrict: String,
   madrasaPoliceStation: String,
   madrasaVillage: String,
@@ -23,5 +24,5 @@ const madrasaInformationModal = new mongoose.Schema({
 });
 
 export const MadrasaInformation =
-  mongoose.models.madrasaInformatioin ||
-  mongoose.model("madrasaInformatioin", madrasaInformationModal);
+  mongoose.models.madrasainformatioins ||
+  mongoose.model("madrasainformatioins", madrasaInformationModal);
