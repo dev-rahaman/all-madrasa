@@ -1,7 +1,7 @@
 import React from "react";
 import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
 
-const ContactInformation = () => {
+const ContactInformation = ({ finalData }) => {
   return (
     <div
       id="contactInformation"
@@ -9,14 +9,18 @@ const ContactInformation = () => {
     >
       <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
       <div className="mb-2">
-        <a href="tel: 01601313258"> 01601313258</a>
+        <span className="font-bold">Address: </span>
+        {finalData.madrasaAddress}
       </div>
       <div className="mb-2">
-        <a href="mailto:jamiarashidia@gmail.com">jamiarashidia@gmail.com</a>
+        <a href="tel: 01601313258"> {finalData.madrasaNumber}</a>
+      </div>
+      <div className="mb-2">
+        <a href="mailto:jamiarashidia@gmail.com"> {finalData.madrasaEmail}</a>
       </div>
       <div className="mb-2">
         <a href="https://rs-rahaman.web.app/" target="_blank">
-          www.jamiarashidia.com
+          {finalData.madrasaWebsite}
         </a>
       </div>
       <div className="flex gap-3">

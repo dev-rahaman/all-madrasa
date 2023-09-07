@@ -11,17 +11,19 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800">
+    <nav className="fixed w-full -top-[0] bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0 text-white">
-              <Image
-                src="https://seeklogo.com/images/O/of-markajululum-mahila-madrasa-logo-44BAC337AA-seeklogo.com.png"
-                alt="Jamia Rashidia Feni"
-                width={50}
-                height={50}
-              ></Image>
+              <Link href={"/allMadrasaOfBangladesh"}>
+                <Image
+                  src="https://seeklogo.com/images/O/of-markajululum-mahila-madrasa-logo-44BAC337AA-seeklogo.com.png"
+                  alt="Jamia Rashidia Feni"
+                  width={50}
+                  height={50}
+                ></Image>
+              </Link>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">

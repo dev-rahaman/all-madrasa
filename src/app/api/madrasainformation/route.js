@@ -9,9 +9,7 @@ export async function GET() {
     const data = await MadrasaInformation.find();
     return NextResponse.json({ result: data, success: true, status: 200 });
   } catch (error) {
-    // data = { success: false };
-    console.log(error.message);
-    // return NextResponse.json({ result: error, success: false, status: 400 });
+    return NextResponse.json({ result: error, success: false, status: 400 });
   }
 }
 
@@ -23,6 +21,6 @@ export async function POST(request) {
     const result = await madrasaInformation.save();
     return NextResponse.json({ result, status: 200, success: true });
   } catch (error) {
-    console.log(error.message);
+    // console.log(error.message);
   }
 }

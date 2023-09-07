@@ -19,7 +19,7 @@ const MedicalStaffInformation = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("submitted");
+    // console.log("submitted");
   };
   return (
     <>
