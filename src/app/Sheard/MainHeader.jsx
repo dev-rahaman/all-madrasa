@@ -3,12 +3,18 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import Classes from "./Classes";
+import OutsideClickHandler from "../Functions/OutsideClickHandler";
 
 const MainHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeDropdown = () => {
+    setIsMenuOpen(false);
+    setIsMenuOpen(false);
   };
 
   return (
@@ -34,7 +40,12 @@ const MainHeader = () => {
                 >
                   বাংলাদেশের টপ ১০ মাদ্রাসা
                 </Link>
-
+                <Link
+                  href="/allMadrasaOfBangladesh"
+                  className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  সব মাদ্রাসা
+                </Link>
                 <Classes />
 
                 <Link
@@ -96,50 +107,58 @@ const MainHeader = () => {
           </div>
         </div>
       </div>
-      {isMenuOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link
-              href="#notice"
-              className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              বাংলাদেশের টপ ১০ মাদ্রাসা
-            </Link>
+      <OutsideClickHandler onOutsideClick={closeDropdown}>
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              <Link
+                href="#notice"
+                className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
+                বাংলাদেশের টপ ১০ মাদ্রাসা
+              </Link>
+              <Link
+                href="/allMadrasaOfBangladesh"
+                className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
+                সব মাদ্রাসা
+              </Link>
 
-            <Link
-              href="#contactInformation"
-              className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              অনলাইন ক্লাসসমূহ
-            </Link>
-            <Classes />
-            <Link
-              href="/Authorization/Resignation"
-              className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              একাউন্ট তৈরি করুন
-            </Link>
-            <Link
-              href="/register"
-              className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              একটি মাদ্রাসা রেজিস্ট্রেশন করুন
-            </Link>
-            <Link
-              href="/register"
-              className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              মাদ্রাসার প্রোফাইল তৈরী করুন
-            </Link>
-            <Link
-              href="/createmadrasaprofile"
-              className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-            >
-              মাদ্রাসার প্রোফাইল তৈরী করুন
-            </Link>
+              <Link
+                href="#contactInformation"
+                className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
+                অনলাইন ক্লাসসমূহ
+              </Link>
+              <Classes />
+              <Link
+                href="/Authorization/Resignation"
+                className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
+                একাউন্ট তৈরি করুন
+              </Link>
+              <Link
+                href="/register"
+                className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
+                একটি মাদ্রাসা রেজিস্ট্রেশন করুন
+              </Link>
+              <Link
+                href="/register"
+                className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
+                মাদ্রাসার প্রোফাইল তৈরী করুন
+              </Link>
+              <Link
+                href="/createmadrasaprofile"
+                className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              >
+                মাদ্রাসার প্রোফাইল তৈরী করুন
+              </Link>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </OutsideClickHandler>
     </nav>
   );
 };

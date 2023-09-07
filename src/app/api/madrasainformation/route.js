@@ -9,7 +9,11 @@ export async function GET() {
     const data = await MadrasaInformation.find();
     return NextResponse.json({ result: data, success: true, status: 200 });
   } catch (error) {
-    return NextResponse.json({ result: error, success: false, status: 400 });
+    return NextResponse.json({
+      result: error.message,
+      success: false,
+      status: 400,
+    });
   }
 }
 
