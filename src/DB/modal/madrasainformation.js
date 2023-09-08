@@ -2,9 +2,14 @@ const mongoose = require("mongoose");
 
 const madrasaInformationModal = new mongoose.Schema({
   madrasaName: String,
-  madrasaDescription: String,
+  madrasaRegistrationNumber: String,
+  madrasaEstablished: String,
   madrasaDistrict: String,
   madrasaPoliceStation: String,
+  madrasaTeacher: String,
+  madrasaServant: String,
+  madrasaStudents: String,
+  madrasaDescription: String,
   madrasaVillage: String,
   madrasaType: String,
   madrasaLogo: String,
@@ -15,12 +20,8 @@ const madrasaInformationModal = new mongoose.Schema({
   madrasaNumber: String,
   madrasaEmail: String,
   madrasaWebsite: String,
-  madrasaRegistrationNumber: String,
-  madrasaStudents: String,
   madrasaClasses: String,
   madrasaManager: String,
-  madrasaTeacher: String,
-  madrasaServant: String,
 });
 
 export const MadrasaInformation =
