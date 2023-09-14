@@ -36,7 +36,7 @@ const Dhaka = () => {
   };
 
   return (
-    <div >
+    <div>
       <OutsideClickHandler onOutsideClick={closeDropdown}>
         <div>
           <button

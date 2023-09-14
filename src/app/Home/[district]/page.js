@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Title from "../Component/Title";
+import Title from "../../Component/Componnts";
 
 export const fetchMadrasaInformation = async ({ district }) => {
   try {

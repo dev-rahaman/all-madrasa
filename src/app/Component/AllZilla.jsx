@@ -490,7 +490,7 @@ const allPoliceStations = {
 };
 
 import React, { useState } from "react";
-import OutsideClickHandler from "../Functions/OutsideClickHandler";
+import OutsideClickHandler from "../Sheared/Functions/OutsideClickHandler";
 
 const AllZilla = () => {
   const [isOpenZilla, setIsOpenZilla] = useState(false);

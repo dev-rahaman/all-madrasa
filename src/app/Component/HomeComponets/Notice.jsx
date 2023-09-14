@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Title from "../Title";
+import Title from "../Componnts";
 import Advice from "./Advice";
 
 const Notice = () => {

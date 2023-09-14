@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import Title from "../Component/Title";
+import Title from "../../Component/Componnts";
 import Image from "next/image";
 
 const Classes = () => {

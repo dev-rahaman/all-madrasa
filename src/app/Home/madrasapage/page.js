@@ -25,9 +25,9 @@ const MadrasaPage = ({ data, covertMadrasaNameOfURL }) => {
         <Navbar />
         <Overview finalData={selectedMadrasa} />
         <MadrasaNoticeBoard finalData={selectedMadrasa} />
-        <ImageGallery finalData={selectedMadrasa}/>
-        <InstructorCard finalData={selectedMadrasa}/>
-        <ContactInformation finalData={selectedMadrasa}/>
+        <ImageGallery finalData={selectedMadrasa} />
+        <InstructorCard finalData={selectedMadrasa} />
+        <ContactInformation finalData={selectedMadrasa} />
         <Feedback />
         <MadrasaMap />
       </div>
