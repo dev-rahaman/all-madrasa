@@ -33,6 +33,7 @@ export const BlogIcon = () => {
     </svg>
   );
 };
+
 export const ClassIcon = () => {
   return (
     <svg
@@ -68,6 +69,7 @@ export const NotchIcon = () => {
     </svg>
   );
 };
+
 export const EventIcon = () => {
   return (
     <svg
@@ -84,6 +86,7 @@ export const EventIcon = () => {
     </svg>
   );
 };
+
 export const VideoIcon = () => {
   return (
     <svg
@@ -96,6 +99,7 @@ export const VideoIcon = () => {
     </svg>
   );
 };
+
 export const PhotoIcon = () => {
   return (
     <svg
@@ -112,6 +116,7 @@ export const PhotoIcon = () => {
     </svg>
   );
 };
+
 export const GroupIcon = () => {
   return (
     <svg
@@ -124,6 +129,7 @@ export const GroupIcon = () => {
     </svg>
   );
 };
+
 export const DonationIcon = () => {
   return (
     <svg
@@ -158,6 +164,7 @@ export const MessageIcon = () => {
     </svg>
   );
 };
+
 export const NotificationIcon = () => {
   return (
     <svg
@@ -190,6 +197,7 @@ export const BoldIcon = () => {
     </svg>
   );
 };
+
 export const ItalicIcon = () => {
   return (
     <svg
@@ -204,6 +212,7 @@ export const ItalicIcon = () => {
     </svg>
   );
 };
+
 export const LinkIcon = () => {
   return (
     <svg
@@ -275,6 +284,7 @@ export const OrderListIcon = () => {
     </svg>
   );
 };
+
 export const BlockQuitIcon = () => {
   return (
     <svg
@@ -294,6 +304,37 @@ export const BlockQuitIcon = () => {
       <path d="M21 7h-6"></path>
       <path d="M9 9h1a1 1 0 1 1 -1 1v-2.5a2 2 0 0 1 2 -2"></path>
       <path d="M3 9h1a1 1 0 1 1 -1 1v-2.5a2 2 0 0 1 2 -2"></path>
+    </svg>
+  );
+};
+
+export const FeedbackIcon = () => {
+  return (
+    <svg
+      stroke="currentColor"
+      fill="currentColor"
+      stroke-width="0"
+      version="1"
+      viewBox="0 0 48 48"
+      enable-background="new 0 0 48 48"
+      height="1em"
+      width="1em"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill="#78909C"
+        d="M40,41H8c-2.2,0-4-1.8-4-4l0-20.9c0-1.3,0.6-2.5,1.7-3.3L24,0l18.3,12.8c1.1,0.7,1.7,2,1.7,3.3V37 C44,39.2,42.2,41,40,41z"
+      ></path>
+      <rect x="12" y="11" fill="#fff" width="24" height="22"></rect>
+      <polygon fill="#9C27B0" points="24,13.6 18,21.4 30,21.4"></polygon>
+      <path
+        fill="#CFD8DC"
+        d="M40,41H8c-2.2,0-4-1.8-4-4l0-20l20,13l20-13v20C44,39.2,42.2,41,40,41z"
+      ></path>
+      <polygon
+        fill="#9C27B0"
+        points="24,28 26,26.7 26,20 22,20 22,26.7"
+      ></polygon>
     </svg>
   );
 };
@@ -322,7 +363,7 @@ export const DropdownIcon = () => {
 export const DashboardIcon = () => {
   return (
     <svg
-      class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+      className="w-5 h-5  transition"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
@@ -347,6 +388,7 @@ export const ProductsIcon = () => {
     </svg>
   );
 };
+
 export const OrderIcon = () => {
   return (
     <svg

@@ -49,3 +49,14 @@ option:nth-child(odd) {
   color: #000;
   background-color: #ea8b26;
 }
+
+.custom-bg {
+  background-color: #0e6c14;
+}
+
+.custom-text {
+  color: #fff;
+}
+.custom-text:hover {
+  color: #9bb200;
+}

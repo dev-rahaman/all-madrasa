@@ -1,15 +1,7 @@
+"use client";
 import { Button } from "@/app/Component/Componnts";
-import {
-  BlockQuitIcon,
-  BoldIcon,
-  HashTagIcon,
-  ItalicIcon,
-  LinkIcon,
-  ListIcon,
-  OrderListIcon,
-  PhotoIcon,
-} from "@/icon/page";
-import React from "react";
+import React, { useState, useRef } from "react";
+import JoditEditor from "jodit-react";
 
 export const TextInput = ({ labelTitle, paragraph, name }) => {
   return (
@@ -22,6 +14,13 @@ export const TextInput = ({ labelTitle, paragraph, name }) => {
 };
 
 const AddBlog = () => {
+  const editor = useRef(null);
+  const [content, setContent] = useState("");
+
+  const joditConfig = {
+    disablePlugins: ["POWERED BY JODIT"],
+  };
+
   return (
     <div className="flex flex-col gap-y-5">
       <TextInput
@@ -38,39 +37,14 @@ const AddBlog = () => {
           Introduce the problem and expand on what you put in the title. Minimum
           20 characters.
         </span>
-        {/* icons */}
-        <div className="flex  gap-5 bg-gray-50 p-2">
-          <button>
-            <BoldIcon />
-          </button>
-          <button>
-            <ItalicIcon />
-          </button>
-          <button>
-            <LinkIcon />
-          </button>
-          <button>
-            <PhotoIcon />
-          </button>
-          <button>
-            <HashTagIcon />
-          </button>
-          <button>
-            <ListIcon />
-          </button>
-          <button>
-            <OrderListIcon />
-          </button>
-          <button>
-            <BlockQuitIcon />
-          </button>
-        </div>
-        <textarea
-          id="content"
-          name="content"
-          required
-          className="w-full h-[250px]"
-        ></textarea>
+        <JoditEditor
+          ref={editor}
+          value={content}
+          tabIndex={1}
+          config={joditConfig}
+          onBlur={(newContent) => setContent(newContent)}
+          onChange={(newContent) => {}}
+        />
       </div>
 
       <TextInput
@@ -78,7 +52,7 @@ const AddBlog = () => {
         paragraph={"Minimum 5 tags is required"}
         name={"tag"}
       />
-
+      {content}
       <div className="flex justify-end">
         <Button buttonText={"Post Now"} />
       </div>

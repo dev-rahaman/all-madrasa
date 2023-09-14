@@ -3,9 +3,11 @@ import {
   BlogIcon,
   ClassIcon,
   DashboardIcon,
+  DonationIcon,
   DropdownIcon,
   EditIcon,
   EventIcon,
+  FeedbackIcon,
   GroupIcon,
   MessageIcon,
   NotchIcon,
@@ -35,6 +37,41 @@ export const Item = ({ menu, link, icon }) => {
   );
 };
 
+const items = [
+  {
+    name: "ইডিট প্রোফাইল",
+    href: "/dashboard/edit-profile",
+    icon: <EditIcon />,
+  },
+  {
+    name: "ব্লগ যুগ করুন",
+    href: "/dashboard/add-blog",
+    icon: <DashboardIcon />,
+  },
+  {
+    name: "নোটিশঃ পাবলিশ করুন",
+    href: "/dashboard/notice",
+    icon: <NotchIcon />,
+  },
+  { name: "ক্লাস পোস্ট করুন", href: "/dashboard/class", icon: <ClassIcon /> },
+  { name: "ইভেন্ট যুগ করুন", href: "/dashboard/event", icon: <EventIcon /> },
+  { name: "ভিডিও শেয়ার করুন", href: "/dashboard/video", icon: <VideoIcon /> },
+  { name: "ফটো শেয়ার করুন", href: "/dashboard/photo", icon: <PhotoIcon /> },
+  {
+    name: "ডোনেশন ইনফরমেশন",
+    href: "/dashboard/donation",
+    icon: <DonationIcon />,
+  },
+  { name: "গ্রুপ ", href: "/dashboard/group", icon: <GroupIcon /> },
+  { name: "মেসেজ", href: "/dashboard/message", icon: <MessageIcon /> },
+  {
+    name: "নোটিফিকেশন",
+    href: "/dashboard/notification",
+    icon: <NotificationIcon />,
+  },
+  { name: "ফিডব্যাক", href: "/dashboard/feedback", icon: <FeedbackIcon /> },
+];
+
 const dropdown = [
   {
     title: "Products",
@@ -55,35 +92,6 @@ const dropdown = [
       { name: "Cancel Order", href: "/dashboard/cancel-order" },
     ],
   },
-];
-
-const items = [
-  {
-    name: "ইডিট প্রোফাইল",
-    href: "/dashboard/edit-profile",
-    icon: <EditIcon />,
-  },
-  {
-    name: "ব্লগ যুগ করুন",
-    href: "/dashboard/add-blog",
-    icon: <DashboardIcon />,
-  },
-  { name: "নোটিশঃ পাবলিশ করুন", href: "/dashboard", icon: <NotchIcon /> },
-  { name: "ক্লাস পোস্ট করুন", href: "/dashboard", icon: <ClassIcon /> },
-  { name: "ইভেন্ট যুগ করুন", href: "/dashboard", icon: <EventIcon /> },
-  { name: "ভিডিও শেয়ার করুন", href: "/dashboard", icon: <VideoIcon /> },
-  { name: "ফটো শেয়ার করুন", href: "/dashboard", icon: <PhotoIcon /> },
-  { name: "গ্রুপ ", href: "/dashboard", icon: <GroupIcon /> },
-  { name: "ফিডব্যাক", href: "/dashboard" },
-  {
-    name: "ডোনেশন ইনফরমেশন",
-    href: "/dashboard",
-    icon: (
-      <Image src={"/DonationIcon.svg"} width={20} height={20} alt="donation" />
-    ),
-  },
-  { name: "মেসেজ", href: "/dashboard", icon: <MessageIcon /> },
-  { name: "নোটিফিকেশন", href: "/dashboard", icon: <NotificationIcon /> },
 ];
 
 export default function Sidebar() {
