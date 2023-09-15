@@ -35,13 +35,13 @@ const MainHeader = () => {
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 <Link
-                  href="/top-ten"
+                  href="/home/top-ten"
                   className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   বাংলাদেশের টপ ১০ মাদ্রাসা
                 </Link>
                 <Link
-                  href="/allMadrasaOfBangladesh"
+                  href="/home/allMadrasaOfBangladesh"
                   className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
                   সব মাদ্রাসা
@@ -49,25 +49,25 @@ const MainHeader = () => {
                 <Classes />
 
                 <Link
-                  href="/classes"
+                  href="/home/classes"
                   className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   অনলাইন ক্লাসসমূহ
                 </Link>
                 <Link
-                  href="/authorization"
+                  href="/home/registermadrasa"
                   className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   একাউন্ট তৈরি করুন
                 </Link>
                 <Link
-                  href="/madrasaregistration"
+                  href="/home/registermadrasa"
                   className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   একটি মাদ্রাসা রেজিস্ট্রেশন করুন
                 </Link>
                 <Link
-                  href="/createmadrasaprofile"
+                  href="/dashboard/edit-profile"
                   className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   মাদ্রাসার প্রোফাইল তৈরী করুন

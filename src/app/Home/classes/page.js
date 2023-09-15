@@ -1,7 +1,8 @@
 import Link from "next/link";
 import React from "react";
-import Title from "../../Component/Componnts";
+
 import Image from "next/image";
+import { Title } from "@/app/Component/Componnts";
 
 const Classes = () => {
   return (

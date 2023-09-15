@@ -1,5 +1,5 @@
-import CreatemadrasaProfile from "@/app/home/createmadrasaprofile/page";
 import React from "react";
+import CreatemadrasaProfile from "../createmadrasaprofile/page";
 
 const editProfile = () => {
   return (

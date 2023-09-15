@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Title from "../Componnts";
 import Advice from "./Advice";
+import { Title } from "../Componnts";
 
 const Notice = () => {
   return (

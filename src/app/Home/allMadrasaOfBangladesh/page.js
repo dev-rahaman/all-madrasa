@@ -1,7 +1,7 @@
+import { Title } from "@/app/Component/Componnts";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Title from "../../Component/Componnts";
 
 export async function loadPosts() {
   const res = await fetch("http://localhost:3000/api/madrasainformation");

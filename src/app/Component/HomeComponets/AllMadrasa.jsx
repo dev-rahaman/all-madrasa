@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import Title from "../Componnts";
+import { Title } from "../Componnts";
+// import Title from "../Componnts";
 const allmadrasa = [
   "Bagerhat",
   "Bandarban",
