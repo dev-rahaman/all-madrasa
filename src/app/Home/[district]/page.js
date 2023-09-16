@@ -33,12 +33,9 @@ const FindByDistrict = async ({ params }) => {
         {data &&
           data?.result.map((item) => (
             <>
-              <div className="flex items-center justify-center flex-wrap gap-5 my-5">
+              <div className="m-5 flex items-center justify-center flex-wrap gap-5 my-5">
                 <Link
-                  href={`/home/allMadrasaOfBangladesh/${item.madrasaName.replace(
-                    / /g,
-                    "-"
-                  )}`}
+                  href={`/home/${item.madrasaName.replace(/ /g, "-")}`}
                   className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
                 >
                   <Image

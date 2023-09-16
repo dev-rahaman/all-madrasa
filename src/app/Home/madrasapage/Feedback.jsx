@@ -5,7 +5,7 @@ const Feedback = () => {
   return (
     <div
       id="feedback"
-      className="h-[500px] my-5 mx-20 overflow-auto custom-scrollbar"
+      className="lg:h-[500px] my-5 lg:mx-20 mx-4 overflow-auto custom-scrollbar"
     >
       <FeedbackContainer
         title="Exploring Our E-Commerce Selection"

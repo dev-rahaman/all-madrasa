@@ -2,8 +2,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import Classes from "./Classes";
 import OutsideClickHandler from "../Functions/OutsideClickHandler";
+import Classes from "./Classes";
+
+const headerItems = [
+  { href: "/home/top-ten", text: "বাংলাদেশের টপ ১০ মাদ্রাসা" },
+  { href: "/home/allmadrasa", text: "সব মাদ্রাসা" },
+  { href: "/home/onlineclasses", text: "অনলাইন ক্লাসসমূহ" },
+  { href: "/home/registermadrasa", text: "একাউন্ট তৈরি করুন" },
+  { href: "/home/registermadrasa", text: "একটি মাদ্রাসা রেজিস্ট্রেশন করুন" },
+  { href: "/dashboard/edit-profile", text: "মাদ্রাসার প্রোফাইল তৈরী করুন" },
+];
 
 const MainHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,11 +27,11 @@ const MainHeader = () => {
   };
 
   return (
-    <nav className="bg-[#ea8b26]">
+    <nav className="bg-[#ea8b26] sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <div className="flex-shrink-0 ">
+            <div className="flex-shrink-0">
               <Link href={"/"}>
                 <Image
                   src="https://seeklogo.com/images/O/of-markajululum-mahila-madrasa-logo-44BAC337AA-seeklogo.com.png"
@@ -34,44 +43,16 @@ const MainHeader = () => {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <Link
-                  href="/home/top-ten"
-                  className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  বাংলাদেশের টপ ১০ মাদ্রাসা
-                </Link>
-                <Link
-                  href="/home/allMadrasaOfBangladesh"
-                  className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  সব মাদ্রাসা
-                </Link>
+                {headerItems.map((item, idx) => (
+                  <Link
+                    href={item?.href}
+                    key={idx}
+                    className="hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  >
+                    {item?.text}
+                  </Link>
+                ))}
                 <Classes />
-
-                <Link
-                  href="/home/classes"
-                  className=" hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  অনলাইন ক্লাসসমূহ
-                </Link>
-                <Link
-                  href="/home/registermadrasa"
-                  className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  একাউন্ট তৈরি করুন
-                </Link>
-                <Link
-                  href="/home/registermadrasa"
-                  className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  একটি মাদ্রাসা রেজিস্ট্রেশন করুন
-                </Link>
-                <Link
-                  href="/dashboard/edit-profile"
-                  className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  মাদ্রাসার প্রোফাইল তৈরী করুন
-                </Link>
               </div>
             </div>
           </div>
@@ -111,50 +92,16 @@ const MainHeader = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <Link
-                href="#notice"
-                className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
-                বাংলাদেশের টপ ১০ মাদ্রাসা
-              </Link>
-              <Link
-                href="/allMadrasaOfBangladesh"
-                className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
-                সব মাদ্রাসা
-              </Link>
-
-              <Link
-                href="#contactInformation"
-                className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
-                অনলাইন ক্লাসসমূহ
-              </Link>
+              {headerItems.map((item, idx) => (
+                <Link
+                  href={item?.href}
+                  key={idx}
+                  className="hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  {item?.text}
+                </Link>
+              ))}
               <Classes />
-              <Link
-                href="/Authorization/Resignation"
-                className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
-                একাউন্ট তৈরি করুন
-              </Link>
-              <Link
-                href="/register"
-                className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
-                একটি মাদ্রাসা রেজিস্ট্রেশন করুন
-              </Link>
-              <Link
-                href="/register"
-                className=" hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
-                মাদ্রাসার প্রোফাইল তৈরী করুন
-              </Link>
-              <Link
-                href="/createmadrasaprofile"
-                className="hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                মাদ্রাসার প্রোফাইল তৈরী করুন
-              </Link>
             </div>
           </div>
         )}

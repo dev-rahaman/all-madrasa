@@ -24,7 +24,7 @@ const TopTen = async () => {
         {data &&
           data?.result.slice(0, 10).map((item) => (
             <>
-              <div className="flex items-center justify-center flex-wrap gap-5 my-5">
+              <div className="flex items-center justify-center flex-wrap gap-5 m-5">
                 <Link
                   href={`/home/allMadrasaOfBangladesh/${item.madrasaName.replace(
                     / /g,

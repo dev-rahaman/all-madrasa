@@ -3,7 +3,7 @@ import React from "react";
 const RegisterMadrasa = () => {
   return (
     <div>
-      <form className="w-1/2 mx-auto my-10">
+      <form className="lg:w-1/2 w-[300px] mx-auto my-10">
         <div class="mb-6">
           <label
             for="email"

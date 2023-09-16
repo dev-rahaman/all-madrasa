@@ -2,7 +2,7 @@ import React from "react";
 
 const SubscribeForm = () => {
   return (
-    <div className="bg-gray-100 p-8 shadow rounded mx-10">
+    <div className="bg-gray-100 p-8 shadow rounded lg:mx-10 mt-4">
       <h2 className="text-2xl font-semibold mb-4">
         Subscribe to Our Newsletter
       </h2>

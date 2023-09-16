@@ -1,7 +1,7 @@
-import AllMadrasa from "../Component/HomeComponets/AllMadrasa";
-import Blogs from "../Component/HomeComponets/Blogs";
-import Notice from "../Component/HomeComponets/Notice";
-import Porik from "../Component/HomeComponets/Porik";
+import AllMadrasa from "./HomeComponets/AllMadrasa";
+import Blogs from "./HomeComponets/Blogs";
+import Notice from "./HomeComponets/Notice";
+import Porik from "./HomeComponets/Porik";
 import TopTen from "./top-ten/page";
 
 const Home = () => {
