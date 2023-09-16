@@ -83,7 +83,7 @@ const AllMadrasa = () => {
         {allmadrasa.map((district, idx) => (
           <Link
             key={idx}
-            href={district}
+            href={`home/${district}`}
             className="inline-block text-center w-[150px] p-5 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100"
           >
             {district}

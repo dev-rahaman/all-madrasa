@@ -24,7 +24,7 @@ const FindByDistrict = async ({ params }) => {
   return (
     <div>
       <Title
-        heading={`${district} সব মাদ্রাসাসমূহ`}
+        heading={`${district} er সব মাদ্রাসাসমূহ`}
         paragraph={
           "We simplify website creation and launch with a few easy steps. Our goal is a stress-free experience, ensuring your new site comes together effortlessly."
         }
@@ -35,7 +35,7 @@ const FindByDistrict = async ({ params }) => {
             <>
               <div className="flex items-center justify-center flex-wrap gap-5 my-5">
                 <Link
-                  href={`/allMadrasaOfBangladesh/${item.madrasaName.replace(
+                  href={`/home/allMadrasaOfBangladesh/${item.madrasaName.replace(
                     / /g,
                     "-"
                   )}`}

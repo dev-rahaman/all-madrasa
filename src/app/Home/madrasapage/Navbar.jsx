@@ -3,6 +3,16 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
+const navbarItem = [
+  { link: { href: "#overview", text: "ওভারভিউ" } },
+  { link: { href: "#notice", text: "নোটিশঃ" } },
+  { link: { href: "#gallery", text: "গ্যালারি" } },
+  { link: { href: "#feedback", text: "ফিডব্যাক" } },
+  { link: { href: "#instructors", text: "উস্তাদ" } },
+  { link: { href: "#contactInformation", text: "কন্টাক ইনফরমেশন" } },
+  { link: { href: "#map", text: "ম্যাপ" } },
+];
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -11,12 +21,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed w-full -top-[0] bg-gray-800">
+    <nav className="w-full bg-gray-800 sticky top-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0 text-white">
-              <Link href={"/allMadrasaOfBangladesh"}>
+              <Link href={"#"}>
                 <Image
                   src="https://seeklogo.com/images/O/of-markajululum-mahila-madrasa-logo-44BAC337AA-seeklogo.com.png"
                   alt="Jamia Rashidia Feni"
@@ -27,60 +37,15 @@ const Navbar = () => {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <Link
-                  href="#overview"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  ওভারভিউ
-                </Link>
-                <Link
-                  href="#notice"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  নোটিশঃ
-                </Link>
-                <Link
-                  href="#gallery"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  গ্যালারি
-                </Link>
-                <Link
-                  href="#feedback"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  ফিডব্যাক
-                </Link>
-                <Link
-                  href="#instructors"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  উস্তাদ
-                </Link>
-                <Link
-                  href="#contactInformation"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  কন্টাক ইনফরমেশন
-                </Link>
-                <Link
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  বেফাক বোর্ড
-                </Link>
-                <Link
-                  href="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  রেজাল্ট
-                </Link>
-                <Link
-                  href="#map"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  ম্যাপ
-                </Link>
+                {navbarItem.map((item, idx) => (
+                  <Link
+                    href={item?.link.href}
+                    key={idx}
+                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  >
+                    {item?.link.text}
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
@@ -119,60 +84,15 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link
-              href="#overview"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              ওভারভিউ
-            </Link>
-            <Link
-              href="#notice"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              নোটিশঃ
-            </Link>
-            <Link
-              href="#gallery"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              গ্যালারি
-            </Link>
-            <Link
-              href="#feedback"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              ফিডব্যাক
-            </Link>
-            <Link
-              href="#instructors"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              উস্তাদ
-            </Link>
-            <Link
-              href="#contactInformation"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              কন্টাক ইনফরমেশন
-            </Link>
-            <Link
-              href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              বেফাক বোর্ড
-            </Link>
-            <Link
-              href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              রেজাল্ট
-            </Link>
-            <Link
-              href="#map"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-            >
-              ম্যাপ
-            </Link>
+            {navbarItem.map((item, idx) => (
+              <Link
+                href={item?.link.href}
+                key={idx}
+                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              >
+                {item?.link.text}
+              </Link>
+            ))}
           </div>
         </div>
       )}

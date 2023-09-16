@@ -2,8 +2,13 @@
 import Image from "next/image";
 import React, { useState } from "react";
 
-const ImageGallery = () => {
-  const images = ["/image1.jpg", "/image2.jpg", "/image3.jpg", "/image2.jpg"];
+const ImageGallery = ({ finalData }) => {
+  const { madrasaGallery1, madrasaGallery2, madrasaGallery3 } = finalData;
+  const images = [
+    `${madrasaGallery1}`,
+    `${madrasaGallery2}`,
+    `${madrasaGallery3}`,
+  ];
 
   const [selectedImage, setSelectedImage] = useState(null);
 

@@ -2,7 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Header = () => {
+const Header = ({ finalData }) => {
+  const { madrasaName, madrasaRegistrationNumber, madrasaEstablished } =
+    finalData;
+
   return (
     <div className="m-10">
       <Link href={"#"}>
@@ -13,11 +16,13 @@ const Header = () => {
           height={150}
         ></Image>
       </Link>
-      <h2 className="text-4xl font-bold mt-5">finalData.madrasaName</h2>
+      <h2 className="text-4xl font-bold mt-5">{madrasaName}</h2>
       <div className="flex items-center gap-5">
-        <h4 lassName="text-4xl font-bold mt-5">স্থাপিত: ১৯৯৬</h4>
         <h4 lassName="text-4xl font-bold mt-5">
-          রেজিস্ট্রেশন নম্বর: finalData.madrasaRegistrationNumber
+          স্থাপিত: {madrasaEstablished}
+        </h4>
+        <h4 lassName="text-4xl font-bold mt-5">
+          রেজিস্ট্রেশন নম্বর:{madrasaRegistrationNumber}
         </h4>
         <div className="flex">
           <svg
@@ -39,7 +44,7 @@ const Header = () => {
               d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
             />
           </svg>
-          <Link href={""}>finalData.madrasaDistrict</Link>
+          <Link href={""}></Link>
         </div>
       </div>
     </div>

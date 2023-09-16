@@ -19,14 +19,13 @@ const AllMadrasaOfBangladesh = async () => {
           "We simplify website creation and launch with a few easy steps. Our goal is a stress-free experience, ensuring your new site comes together effortlessly."
         }
       />
-
       <div className="flex items-center justify-center flex-wrap gap-5">
         {data &&
           data?.result.map((item) => (
             <>
               <div className="flex items-center justify-center flex-wrap gap-5 my-5">
                 <Link
-                  href={`/allMadrasaOfBangladesh/${item.madrasaName.replace(
+                  href={`/home/allMadrasaOfBangladesh/${item.madrasaName.replace(
                     / /g,
                     "-"
                   )}`}
