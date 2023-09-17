@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { Title } from "../../Component/Componnts";
+import { CustomLink, Title } from "../../Component/Componnts";
 
 const Blogs = () => {
   return (
@@ -124,6 +124,7 @@ const Blogs = () => {
             </Link>
           </div>
         </div>
+        <CustomLink linkHref={"/blogs"} linkText={"See More"}></CustomLink>
       </div>
     </>
   );

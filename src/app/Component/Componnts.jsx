@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const Title = ({ heading, headingStyle, headingStyle2, paragraph }) => {
   return (
     <div className="flex items-center justify-center flex-col bg4">
@@ -35,5 +37,16 @@ export const Advice = ({ heading, title }) => {
         </div>
       </div>
     </div>
+  );
+};
+
+export const CustomLink = ({ linkHref, linkText }) => {
+  return (
+    <Link
+      href={`${linkHref}`}
+      className="font-bold bg-[#0e6c14] hover:bg-[#9bb200] hover:text-[#0e6c14] text-center text-white rounded-3xl w-[120px] p-2"
+    >
+      {linkText}
+    </Link>
   );
 };

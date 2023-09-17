@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { Advice, Title } from "../../Component/Componnts";
+import { Advice, CustomLink, Title } from "../../Component/Componnts";
 
 const Notice = () => {
   return (
@@ -152,6 +152,7 @@ const Notice = () => {
             Details
           </Link>
         </div>
+        <CustomLink linkHref={"/notices"} linkText={"See More"}></CustomLink>
       </div>
       <Advice
         heading={"আপনার রাজকুমারী কে পর্দা শিক্ষা দিন।"}
