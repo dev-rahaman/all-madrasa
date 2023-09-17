@@ -6,12 +6,13 @@ import OutsideClickHandler from "../Functions/OutsideClickHandler";
 import Classes from "./Classes";
 
 const headerItems = [
-  { href: "/home/top-ten", text: "বাংলাদেশের টপ ১০ মাদ্রাসা" },
+  { href: "/home/top-ten", text: "টপ ১০ মাদ্রাসা" },
   { href: "/home/allmadrasa", text: "সব মাদ্রাসা" },
   { href: "/home/onlineclasses", text: "অনলাইন ক্লাসসমূহ" },
+  { href: "/blogs", text: "ব্লগ" },
   { href: "/home/registermadrasa", text: "একাউন্ট তৈরি করুন" },
   { href: "/home/registermadrasa", text: "একটি মাদ্রাসা রেজিস্ট্রেশন করুন" },
-  { href: "/dashboard/edit-profile", text: "মাদ্রাসার প্রোফাইল তৈরী করুন" },
+  // { href: "/dashboard/edit-profile", text: "মাদ্রাসার প্রোফাইল তৈরী করুন" },
 ];
 
 const MainHeader = () => {
@@ -47,7 +48,7 @@ const MainHeader = () => {
                   <Link
                     href={item?.href}
                     key={idx}
-                    className="hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    className=" hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                   >
                     {item?.text}
                   </Link>
