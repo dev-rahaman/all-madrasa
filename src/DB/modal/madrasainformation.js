@@ -27,3 +27,28 @@ const madrasaInformationModal = new mongoose.Schema({
 export const MadrasaInformation =
   mongoose.models.madrasainformatioins ||
   mongoose.model("madrasainformatioins", madrasaInformationModal);
+
+// madrasa registration schema
+const madrasaRegistrationModal = new mongoose.Schema({
+  _id: mongoose.Schema.Types.ObjectId,
+  name: String,
+  email: String,
+  password: String,
+  createdAt: { type: Date, default: Date.now },
+});
+
+export const MadrasaRegistration =
+  mongoose.models.madrasaRegistrations ||
+  mongoose.model("madrasaRegistrations", madrasaRegistrationModal);
+
+// madrasa registration schema
+const blogsModal = new mongoose.Schema({
+  _id: mongoose.Schema.Types.ObjectId,
+  title: String,
+  content: String,
+  tags: String,
+  createdAt: { type: Date, default: Date.now },
+});
+
+export const BlogsData =
+  mongoose.models.blogs || mongoose.model("blogs", blogsModal);

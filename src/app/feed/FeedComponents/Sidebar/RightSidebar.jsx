@@ -1,0 +1,125 @@
+import Link from "next/link";
+import {
+  BlogIcon,
+  ClassIcon,
+  EditIcon,
+  EventIcon,
+  ExploreIcon,
+  HistoryIcon,
+  HomeIcon,
+  NoticeIcon,
+  NotificationIcon,
+  PhotoIcon,
+  VideoIcon,
+} from "@/icon/page";
+
+export const Item = ({ name, link, icon }) => {
+  return (
+    <ul>
+      <li>
+        <Link
+          href={link}
+          className="flex items-center p-2 text-[18px] hover:bg-[#9ab2003f] rounded-lg group"
+        >
+          <div className="me-2">{icon}</div>
+          {name}
+        </Link>
+      </li>
+    </ul>
+  );
+};
+
+const items = [
+  {
+    name: "হোম",
+    link: "/feed",
+    icon: <HomeIcon />,
+  },
+  {
+    name: "এক্সপ্লোর",
+    link: "/explore",
+    icon: <ExploreIcon />,
+  },
+  {
+    name: "ক্লাস",
+    link: "/classes",
+    icon: <ClassIcon />,
+  },
+  {
+    name: "ব্লগ",
+    href: "/blogs",
+    icon: <BlogIcon />,
+  },
+  {
+    name: "নোটিশঃ",
+    link: "/notice",
+    icon: <NoticeIcon />,
+  },
+  {
+    name: "ইভেন্ট",
+    link: "/events",
+    icon: <EventIcon />,
+  },
+  {
+    name: "নোটিফিকেশন",
+    link: "/notifications",
+    icon: <NotificationIcon />,
+  },
+  {
+    name: "মেসেজ",
+    link: "/message",
+    icon: <NoticeIcon />,
+  },
+  {
+    name: "ফটো",
+    link: "/photo",
+    icon: <PhotoIcon />,
+  },
+  {
+    name: "ভিডিও",
+    link: "/video",
+    icon: <VideoIcon />,
+  },
+  {
+    name: "প্রোফাইল",
+    link: "/profile",
+    icon: <EditIcon />,
+  },
+  {
+    name: "পোস্ট",
+    link: "/post",
+    icon: <NoticeIcon />,
+  },
+  {
+    name: "হিস্টোরি",
+    link: "/hostory",
+    icon: <HistoryIcon />,
+  },
+  {
+    name: "প্রিমিয়াম",
+    link: "/premium",
+    icon: <NoticeIcon />,
+  },
+];
+
+const RightSidebar = () => {
+  return (
+    <div className="left-sidebar w-[270px] p-4 pb-20  leading-6 h-screen overflow-x-auto custom-scrollbar ">
+      <div className="text-2xl font-bold mb-4">Social Media</div>
+      <ul>
+        <li>
+          {items.map((item, idx) => (
+            <Item
+              key={idx}
+              icon={item.icon}
+              name={item.name}
+              link={`${item.link}`}
+            />
+          ))}
+        </li>
+      </ul>
+    </div>
+  );
+};
+
+export default RightSidebar;

@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import OutsideClickHandler from "../Functions/OutsideClickHandler";
+import OutsideClickHandler from "@/app/Component/Functions/OutsideClickHandler";
 import Classes from "./Classes";
 
 const headerItems = [

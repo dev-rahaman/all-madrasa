@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import OutsideClickHandler from "../Functions/OutsideClickHandler";
+import OutsideClickHandler from "@/app/Component/Functions/OutsideClickHandler";
 
 const Monymonshing = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,6 +1,6 @@
 "use client";
+import OutsideClickHandler from "@/app/Component/Functions/OutsideClickHandler";
 import React, { useState } from "react";
-import OutsideClickHandler from "../Functions/OutsideClickHandler";
 
 const Barisal = () => {
   const [isOpen, setIsOpen] = useState(false);

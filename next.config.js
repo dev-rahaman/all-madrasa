@@ -8,6 +8,9 @@ const nextConfig = {
       { protocol: "https", hostname: "c8.alamy.com" },
     ],
   },
+  experimental: {
+    serverActions: true,
+  },
 };
 
 module.exports = nextConfig;

@@ -1,4 +1,6 @@
 "use client";
+import { AuthContext } from "@/Provider/AuthProvider";
+import OutsideClickHandler from "@/app/Sheared/Functions/OutsideClickHandler";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -14,10 +16,14 @@ const navbarItem = [
 ];
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const openDropdown = () => {
+    setIsOpen(true);
+  };
+
+  const closeDropdown = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -51,7 +57,7 @@ const Navbar = () => {
           </div>
           <div className="-mr-2 flex md:hidden">
             <button
-              onClick={toggleMenu}
+              onClick={openDropdown}
               className="text-gray-400 hover:text-white focus:outline-none focus:text-white"
             >
               <svg
@@ -61,7 +67,7 @@ const Navbar = () => {
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                {isMenuOpen ? (
+                {isOpen ? (
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -81,21 +87,23 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      {isMenuOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navbarItem.map((item, idx) => (
-              <Link
-                href={item?.link.href}
-                key={idx}
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-              >
-                {item?.link.text}
-              </Link>
-            ))}
+      <OutsideClickHandler onOutsideClick={closeDropdown}>
+        {isOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+              {navbarItem.map((item, idx) => (
+                <Link
+                  href={item?.link.href}
+                  key={idx}
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  {item?.link.text}
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </OutsideClickHandler>
     </nav>
   );
 };

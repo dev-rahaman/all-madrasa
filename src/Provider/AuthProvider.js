@@ -6,6 +6,7 @@ export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
   const router = useRouter();
+
   const redirect = (url) => {
     if (url) {
       router.push(url);

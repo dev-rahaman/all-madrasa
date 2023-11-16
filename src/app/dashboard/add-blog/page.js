@@ -2,6 +2,7 @@
 import { Button } from "@/app/Component/Componnts";
 import React, { useState, useRef } from "react";
 import JoditEditor from "jodit-react";
+import { handleFromSubmit } from "../DashboardComponents/FromSubmit";
 
 export const TextInput = ({ labelTitle, paragraph, name }) => {
   return (
@@ -22,7 +23,7 @@ const AddBlog = () => {
   };
 
   return (
-    <div className="flex flex-col gap-y-5">
+    <form action={handleFromSubmit} className="flex flex-col gap-y-5">
       <TextInput
         labelTitle={"Title"}
         paragraph={
@@ -44,19 +45,21 @@ const AddBlog = () => {
           config={joditConfig}
           onBlur={(newContent) => setContent(newContent)}
           onChange={(newContent) => {}}
+          name={"content"}
         />
       </div>
 
       <TextInput
         labelTitle={"Tag"}
         paragraph={"Minimum 5 tags is required"}
-        name={"tag"}
+        name={"tags"}
       />
-      {content}
+
       <div className="flex justify-end">
         <Button buttonText={"Post Now"} />
       </div>
-    </div>
+      {content}
+    </form>
   );
 };
 
