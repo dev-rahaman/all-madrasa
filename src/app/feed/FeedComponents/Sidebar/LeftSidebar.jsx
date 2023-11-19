@@ -38,23 +38,23 @@ const items = [
     icon: <HomeIcon />,
   },
   {
+    name: "ক্লাস",
+    link: "/feed/classes",
+    icon: <ClassIcon />,
+  },
+  {
+    name: "আর্টিকেল",
+    link: "/feed/article",
+    icon: <BlogIcon />,
+  },
+  {
     name: "এক্সপ্লোর",
     link: "/explore",
     icon: <ExploreIcon />,
   },
   {
-    name: "ক্লাস",
-    link: "/classes",
-    icon: <ClassIcon />,
-  },
-  {
-    name: "ব্লগ",
-    href: "/blogs",
-    icon: <BlogIcon />,
-  },
-  {
     name: "নোটিশঃ",
-    link: "/notice",
+    link: "/feed/notice",
     icon: <NoticeIcon />,
   },
   {
