@@ -52,7 +52,7 @@ const instructors = [
   },
 ];
 
-const InstructorCard = ({ finalData }) => {
+const InstructorCard = () => {
   return (
     <div id="instructors" className="bg-gray-100 p-8">
       <h2 className="text-2xl font-semibold mb-4">Instructors</h2>

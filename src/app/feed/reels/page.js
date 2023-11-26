@@ -12,9 +12,10 @@ const cartItems = [
   { id: 8, name: "Item 8" },
   { id: 9, name: "Item 9" },
   { id: 10, name: "Item 10" },
+  { id: 11, name: "Item 11" },
 ];
 
-const Short = () => {
+const Reels = () => {
   const [startIndex, setStartIndex] = useState(0);
 
   const handlePrev = () => {
@@ -61,4 +62,4 @@ const Short = () => {
   );
 };
 
-export default Short;
+export default Reels;

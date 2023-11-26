@@ -2,30 +2,31 @@ import React from "react";
 import SubscribeForm from "./SubscribeForm";
 import { Disclaimer, Donation } from "./Alert";
 
-const Overview = ({ finalData }) => {
-  const {
-    madrasaTeacher,
-    madrasaServant,
-    madrasaStudents,
-    madrasaDescription,
-  } = finalData;
+// const Overview = ({ finalData }) => {
+//   const {
+//     madrasaTeacher,
+//     madrasaServant,
+//     madrasaStudents,
+//     madrasaDescription,
+//   } = finalData;
 
+const Overview = () => {
   return (
     <>
       <div className="lg:flex items-center justify-center gap-4 mt-10">
         <div className="flex items-center justify-center lg:w-[350px] m-5 custom-rounded shadow h-[200px] border rounded-b-lg bg-gray-50 ">
           <h2 className="text-4xl font-extrabold">
-            #উস্তাদ {madrasaTeacher} জন
+            #উস্তাদ {"madrasaTeacher"} জন
           </h2>
         </div>
         <div className="flex  items-center justify-center lg:w-[350px] m-5 custom-rounded  shadow h-[200px] border rounded-b-lg bg-gray-50 ">
           <h2 className="text-4xl font-extrabold">
-            #খাদেম {madrasaServant} জন
+            #খাদেম {"madrasaServant"} জন
           </h2>
         </div>
         <div className="flex items-center justify-center lg:w-[350px] m-5 custom-rounded shadow h-[200px] border bg-gray-50">
           <h2 className="text-4xl font-extrabold">
-            # ছাত্র {madrasaStudents} জন
+            # ছাত্র {"madrasaStudents"} জন
           </h2>
         </div>
       </div>
@@ -37,7 +38,7 @@ const Overview = ({ finalData }) => {
           <Donation />
         </div>
         <div className=" leading-8	 bg-gray-100 lg:w-2/3 mt-5 p-4 rounded">
-          <h3>{madrasaDescription}</h3>
+          <h3>{"madrasaDescription"}</h3>
         </div>
       </div>
     </>

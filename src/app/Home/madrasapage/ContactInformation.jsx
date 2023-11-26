@@ -1,7 +1,8 @@
 import React from "react";
 import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
 
-const ContactInformation = ({ finalData }) => {
+// const ContactInformation = ({ finalData }) => {
+const ContactInformation = () => {
   return (
     <div
       id="contactInformation"
@@ -10,17 +11,17 @@ const ContactInformation = ({ finalData }) => {
       <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
       <div className="mb-2">
         <span className="font-bold">Address: </span>
-        {finalData.madrasaAddress}
+        {"finalData.madrasaAddress"}
       </div>
       <div className="mb-2">
-        <a href="tel: 01601313258"> {finalData.madrasaNumber}</a>
+        <a href="tel: 01601313258"> {"finalData.madrasaNumber"}</a>
       </div>
       <div className="mb-2">
-        <a href="mailto:jamiarashidia@gmail.com"> {finalData.madrasaEmail}</a>
+        <a href="mailto:jamiarashidia@gmail.com"> {"finalData.madrasaEmail"}</a>
       </div>
       <div className="mb-2">
         <a href="https://rs-rahaman.web.app/" target="_blank">
-          {finalData.madrasaWebsite}
+          {"finalData.madrasaWebsite"}
         </a>
       </div>
       <div className="flex gap-3">

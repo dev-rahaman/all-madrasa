@@ -1,5 +1,5 @@
 import React from "react";
-import Short from "./shorts/page";
+import Short from "./reels/page";
 import Post from "./post/page";
 import Blogs from "../blogs/page";
 import Classes from "./classes/page";

@@ -2,6 +2,7 @@
 import Link from "next/link";
 import {
   BlogIcon,
+  BookIcon,
   ClassIcon,
   EditIcon,
   EventIcon,
@@ -11,6 +12,7 @@ import {
   NoticeIcon,
   NotificationIcon,
   PhotoIcon,
+  ShortIcon,
   VideoIcon,
 } from "@/icon/page";
 import { useState } from "react";
@@ -48,9 +50,9 @@ const items = [
     icon: <BlogIcon />,
   },
   {
-    name: "এক্সপ্লোর",
-    link: "/explore",
-    icon: <ExploreIcon />,
+    name: "বই",
+    link: "/feed/book",
+    icon: <BookIcon />,
   },
   {
     name: "নোটিশঃ",
@@ -58,50 +60,61 @@ const items = [
     icon: <NoticeIcon />,
   },
   {
-    name: "ইভেন্ট",
-    link: "/events",
-    icon: <EventIcon />,
-  },
-  {
-    name: "নোটিফিকেশন",
-    link: "/notifications",
-    icon: <NotificationIcon />,
-  },
-  {
-    name: "মেসেজ",
-    link: "/message",
-    icon: <NoticeIcon />,
-  },
-  {
     name: "ফটো",
-    link: "/photo",
+    link: "/feed/photo",
     icon: <PhotoIcon />,
   },
   {
     name: "ভিডিও",
-    link: "/video",
+    link: "/feed/video",
     icon: <VideoIcon />,
   },
   {
+    name: "শর্ট",
+    link: "/feed/short",
+    icon: <ShortIcon />,
+  },
+  {
+    name: "ইভেন্ট",
+    link: "/feed/events",
+    icon: <EventIcon />,
+  },
+  {
+    name: "নোটিফিকেশন",
+    link: "/feed/notifications",
+    icon: <NotificationIcon />,
+  },
+  {
+    name: "মেসেজ",
+    link: "/feed/message",
+    icon: <NoticeIcon />,
+  },
+
+  {
     name: "প্রোফাইল",
-    link: "/profile",
+    link: "/feed/profile",
     icon: <EditIcon />,
   },
   {
-    name: "পোস্ট",
-    link: "/post",
-    icon: <NoticeIcon />,
+    name: "এক্সপ্লোর",
+    link: "/feed/explore",
+    icon: <ExploreIcon />,
   },
   {
     name: "হিস্টোরি",
-    link: "/hostory",
+    link: "/feed/history",
     icon: <HistoryIcon />,
   },
   {
     name: "প্রিমিয়াম",
-    link: "/premium",
+    link: "/feed/premium",
     icon: <NoticeIcon />,
   },
+  // {
+  //   name: "পোস্ট",
+  //   link: "/post",
+  //   icon: <NoticeIcon />,
+  // },
 ];
 
 const LeftSidebar = () => {

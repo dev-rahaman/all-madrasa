@@ -2,66 +2,67 @@
 import Image from "next/image";
 import React, { useState } from "react";
 
-const ImageGallery = ({ finalData }) => {
-  const { madrasaGallery1, madrasaGallery2, madrasaGallery3 } = finalData;
-  const images = [
-    `${madrasaGallery1}`,
-    `${madrasaGallery2}`,
-    `${madrasaGallery3}`,
-  ];
+// const ImageGallery = ({ finalData }) => {
+const ImageGallery = () => {
+  // const { madrasaGallery1, madrasaGallery2, madrasaGallery3 } = finalData;
+  // const images = [
+  //   `${madrasaGallery1}`,
+  //   `${madrasaGallery2}`,
+  //   `${madrasaGallery3}`,
+  // ];
 
-  const [selectedImage, setSelectedImage] = useState(null);
+  // const [selectedImage, setSelectedImage] = useState(null);
 
-  const openImageModal = (image) => {
-    setSelectedImage(image);
-  };
+  // const openImageModal = (image) => {
+  //   setSelectedImage(image);
+  // };
 
-  const closeImageModal = () => {
-    setSelectedImage(null);
-  };
+  // const closeImageModal = () => {
+  //   setSelectedImage(null);
+  // };
 
   return (
     <div id="gallery" className="p-8">
       <h2 className="text-2xl font-semibold mb-4">Image Gallery</h2>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {images.map((image, index) => (
-          <>
-            <div key={index} className="relative overflow-hidden rounded-md">
-              <Image
-                src={image}
-                alt={`Image ${index + 1}`}
-                width={100}
-                height={100}
+        {/* {images.map((image, index) => ( */}
+        <>
+          <div className="relative overflow-hidden rounded-md">
+            <Image
+              src={"/image2.jpg"}
+              alt={`Image  `}
+              width={100}
+              height={100}
+              className="w-full h-auto"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 transition duration-300 ease-in-out hover:opacity-100">
+              <button
+                className="text-white text-xl"
+                // onClick={() => openImageModal(image)}
+              >
+                View
+              </button>
+            </div>
+          </div>
+          {/* {selectedImage && ( */}
+          {/* <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
+            <div className="max-w-full max-h-full overflow-auto">
+              <img
+                src={"/image2.jpg"}
+                alt={`Image  `}
                 className="w-full h-auto"
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 transition duration-300 ease-in-out hover:opacity-100">
-                <button
-                  className="text-white text-xl"
-                  onClick={() => openImageModal(image)}
-                >
-                  View
-                </button>
-              </div>
+              <button
+                className="text-white absolute top-4 right-4 text-xl cursor-pointer"
+                onClick={closeImageModal}
+              >
+                X
+              </button>
             </div>
-            {selectedImage && (
-              <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
-                <div className="max-w-full max-h-full overflow-auto">
-                  <img
-                    src={selectedImage}
-                    alt={`Image ${index + 1}`}
-                    className="w-full h-auto"
-                  />
-                  <button
-                    className="text-white absolute top-4 right-4 text-xl cursor-pointer"
-                    onClick={closeImageModal}
-                  >
-                    X
-                  </button>
-                </div>
-              </div>
-            )}
-          </>
-        ))}
+          </div>
+          )} */}
+        </>
+        {/* ))} */}
       </div>
     </div>
   );

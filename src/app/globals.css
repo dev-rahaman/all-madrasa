@@ -4,6 +4,26 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+/* shorts */
+.short-container::-webkit-scrollbar {
+  display: none;
+}
+
+.short-container {
+  width: 700px;
+  height: 82vh;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow: none;
+}
+
+.short {
+  scroll-snap-align: start;
 }
 
 .custom-rounded {
@@ -71,4 +91,28 @@ option:nth-child(odd) {
 }
 .custom-text:hover {
   color: #9bb200;
+}
+
+/* notifications */
+
+td {
+  border: 1px solid #dddddd;
+  padding: 20px;
+}
+
+td:hover,
+tr:nth-child(even):hover {
+  background-color: #dddddd;
+}
+
+.messageInput {
+  border: 1px solid #000;
+  border-radius: 50px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.messageInput:focus {
+  border: 1px solid #000;
+  clip-path: polygon(0% 0%, 96% 0, 100% 50%, 96% 100%, 0% 100%);
 }
